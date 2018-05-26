@@ -1,0 +1,35 @@
+{
+  "name": "react-praise",
+  "version": "1.0.0",
+  "description":
+    "A React binding for Praise (https://github.com/TejasQ/praise)",
+  "main": "dist/react-praise.js",
+  "author": "Tejas Kumar <tejas@tejas.qa>",
+  "license": "MIT",
+  "scripts": {
+    "build": "rollup -c rollup.config.js",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.tsx": ["prettier --write", "git add"]
+  },
+  "files": ["dist/"],
+  "types": "dist/index.d.ts",
+  "devDependencies": {
+    "@types/react": "^16.3.14",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.1.2",
+    "prettier": "^1.12.1",
+    "rollup": "^0.59.3",
+    "rollup-plugin-typescript2": "^0.14.0",
+    "typescript": "^3.0.0-dev.20180526"
+  },
+  "dependencies": {
+    "react": "^16.4.0"
+  },
+  "peerDependencies": {
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "praise": "^1.0.0"
+  }
+}
