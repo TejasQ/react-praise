@@ -1,8 +1,7 @@
 {
   "name": "react-praise",
   "version": "0.0.0",
-  "description":
-    "A React binding for Praise. (https://github.com/TejasQ/praise)",
+  "description": "A React binding for Praise. (https://github.com/TejasQ/praise)",
   "main": "dist/react-praise.js",
   "author": "Tejas Kumar <tejas@tejas.qa>",
   "license": "MIT",
@@ -11,9 +10,14 @@
     "precommit": "lint-staged"
   },
   "lint-staged": {
-    "*.tsx": ["prettier --write", "git add"]
+    "*.tsx": [
+      "prettier --write",
+      "git add"
+    ]
   },
-  "files": ["dist/"],
+  "files": [
+    "dist/"
+  ],
   "types": "dist/index.d.ts",
   "devDependencies": {
     "@types/react": "^16.3.14",
@@ -25,11 +29,12 @@
     "typescript": "^3.0.0-dev.20180526"
   },
   "dependencies": {
+    "praise": "^1.0.1",
     "react": "^16.4.0"
   },
   "peerDependencies": {
+    "praise": "^1.0.0",
     "react": "^16.4.0",
-    "react-dom": "^16.4.0",
-    "praise": "^1.0.0"
+    "react-dom": "^16.4.0"
   }
 }
