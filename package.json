@@ -1,6 +1,6 @@
 {
   "name": "react-praise",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "A React binding for Praise. (https://github.com/TejasQ/praise)",
   "main": "dist/react-praise.js",
   "author": "Tejas Kumar <tejas@tejas.qa>",
