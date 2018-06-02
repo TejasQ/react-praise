@@ -19,8 +19,6 @@ import React from "react";
 import { render } from "react-dom";
 import Praise from "react-praise";
 
-import "./index.css";
-
 const myPhrases = {
   "*": phrase => "You said " + phrase
 };
