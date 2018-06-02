@@ -10,33 +10,26 @@ This is a project that binds the (experimental) [voice-invoked function tool, Pr
 
 ## Usage
 
-react-praise gives you a component whose children get the return value of a voice-invoked function. For example, here's how you can display a photo of a random _good boi_ to a user.
+react-praise gives you a component whose children get the return value of a voice-invoked function. For example, here's how you can display everything a user says.
+
+[![Edit react-praise demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/rvr80nr9m)
 
 ```jsx
 import React from "react";
+import { render } from "react-dom";
 import Praise from "react-praise";
 
+import "./index.css";
+
 const myPhrases = {
-  "get me a dog photo": async () => {
-    const response = await fetch("https://dog.ceo/api/breeds/image/random");
-    const { message } = await response.json();
-    return message;
-  }
+  "*": phrase => "You said " + phrase
 };
 
 const MyAppWithVoice = props => (
-  <Praise phrases={myPhrases}>
-    {dogPhotoURL =>
-      dogPhotoURL ? (
-        <img alt="good boye!" src={dogPhotoURL} />
-      ) : (
-        "Would you like a dog photo? Ask me!"
-      )
-    }
-  </Praise>
+  <Praise phrases={myPhrases}>{output => <h2>{output}</h2>}</Praise>
 );
 
-export default App;
+render(<MyAppWithVoice />, document.getElementById("root"));
 ```
 
 ### Options
